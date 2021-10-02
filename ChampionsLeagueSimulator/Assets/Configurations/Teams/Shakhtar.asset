@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc7d360d53e61794a8a0f4376f54cde4, type: 3}
-  m_Name: Sakhtar
+  m_Name: Shakhtar
   m_EditorClassIdentifier: 
-  TeamName: 
-  Seed: 0
-  Nationality: 0
+  TeamName: Shakhtar
+  Seed: 3
+  Nationality: 7
   Logo: {fileID: 0}
   TeamStats:
-    Attacking: 0
-    Stamina: 0
-    Defence: 0
-    PlayMaking: 0
+    Attacking: 45
+    Stamina: 40
+    Defence: 30
+    PlayMaking: 50

@@ -7,7 +7,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Team", menuName = "ScriptableObjects/Teams", order = 1)]
 public class Team : ScriptableObject
 {
-    [SerializeField] public string TeamName;
+    [SerializeField] public TeamNamesEnum TeamName;
     [SerializeField] public int Seed;
     [SerializeField] public NationalityEnum Nationality;
     [SerializeField] public Sprite Logo;
@@ -39,5 +39,11 @@ public enum NationalityEnum
     Sweden,
     Turkey,
     Ukrain,
-    Belgium
+    Belgium,
+    Netherland,
+    Portugal,
+    Austria,
+    Moldova,
+    Switzerland,
+    Russia
 }

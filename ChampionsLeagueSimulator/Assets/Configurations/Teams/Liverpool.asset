@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc7d360d53e61794a8a0f4376f54cde4, type: 3}
   m_Name: Liverpool
   m_EditorClassIdentifier: 
-  TeamName: 
-  Seed: 0
-  Nationality: 0
+  TeamName: Liverpool
+  Seed: 2
+  Nationality: 4
   Logo: {fileID: 0}
   TeamStats:
-    Attacking: 0
-    Stamina: 0
-    Defence: 0
-    PlayMaking: 0
+    Attacking: 85
+    Stamina: 60
+    Defence: 65
+    PlayMaking: 50

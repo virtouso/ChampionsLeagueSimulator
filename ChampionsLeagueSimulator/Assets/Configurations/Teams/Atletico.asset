@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc7d360d53e61794a8a0f4376f54cde4, type: 3}
   m_Name: Atletico
   m_EditorClassIdentifier: 
-  TeamName: 
-  Seed: 0
-  Nationality: 0
+  TeamName: Atletico
+  Seed: 1
+  Nationality: 3
   Logo: {fileID: 0}
   TeamStats:
     Attacking: 0

@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc7d360d53e61794a8a0f4376f54cde4, type: 3}
   m_Name: Bayern
   m_EditorClassIdentifier: 
-  TeamName: 
-  Seed: 0
+  TeamName: Bayern
+  Seed: 1
   Nationality: 0
   Logo: {fileID: 0}
   TeamStats:
-    Attacking: 0
-    Stamina: 0
-    Defence: 0
-    PlayMaking: 0
+    Attacking: 80
+    Stamina: 75
+    Defence: 75
+    PlayMaking: 80
