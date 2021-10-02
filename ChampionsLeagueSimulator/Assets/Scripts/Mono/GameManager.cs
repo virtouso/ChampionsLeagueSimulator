@@ -11,29 +11,29 @@ public class GameManager : MonoBehaviour
         Stage groupStage = new Stage();
         groupStage.Sides = new List<SideBase>();
 
-        GroupSide groupA = new GroupSide();
+        GroupSide groupA = new GroupSide("Group A");
         groupA.AddTeams(new List<Team>() { _teamsList.TeamsDictionary[TeamNamesEnum.ManCity], _teamsList.TeamsDictionary[TeamNamesEnum.Paris], _teamsList.TeamsDictionary[TeamNamesEnum.Leipzig], _teamsList.TeamsDictionary[TeamNamesEnum.ClubBruges] });
 
-        GroupSide groupB = new GroupSide();
+        GroupSide groupB = new GroupSide("Group B");
         groupB.AddTeams(new List<Team>() { _teamsList.TeamsDictionary[TeamNamesEnum.Atletico], _teamsList.TeamsDictionary[TeamNamesEnum.LiverPool], _teamsList.TeamsDictionary[TeamNamesEnum.Porto], _teamsList.TeamsDictionary[TeamNamesEnum.Milan] });
 
-        GroupSide groupC = new GroupSide();
+        GroupSide groupC = new GroupSide("Group C");
         groupC.AddTeams(new List<Team>() { _teamsList.TeamsDictionary[TeamNamesEnum.Sporting], _teamsList.TeamsDictionary[TeamNamesEnum.Durtmond], _teamsList.TeamsDictionary[TeamNamesEnum.Ajax], _teamsList.TeamsDictionary[TeamNamesEnum.Besiktas] });
 
 
-        GroupSide groupD = new GroupSide();
+        GroupSide groupD = new GroupSide("Group D");
         groupD.AddTeams(new List<Team>() { _teamsList.TeamsDictionary[TeamNamesEnum.Inter], _teamsList.TeamsDictionary[TeamNamesEnum.Real], _teamsList.TeamsDictionary[TeamNamesEnum.Shakhtar], _teamsList.TeamsDictionary[TeamNamesEnum.Sheriff] });
 
-        GroupSide groupE = new GroupSide();
+        GroupSide groupE = new GroupSide("Group E");
         groupE.AddTeams(new List<Team>() { _teamsList.TeamsDictionary[TeamNamesEnum.Bayern], _teamsList.TeamsDictionary[TeamNamesEnum.Barcelona], _teamsList.TeamsDictionary[TeamNamesEnum.Benfica], _teamsList.TeamsDictionary[TeamNamesEnum.DynamoKyiv] });
 
-        GroupSide groupF = new GroupSide();
+        GroupSide groupF = new GroupSide("Group F");
         groupF.AddTeams(new List<Team>() { _teamsList.TeamsDictionary[TeamNamesEnum.Villareal], _teamsList.TeamsDictionary[TeamNamesEnum.Manchester], _teamsList.TeamsDictionary[TeamNamesEnum.Atalanta], _teamsList.TeamsDictionary[TeamNamesEnum.YoungBoys] });
 
-        GroupSide groupG = new GroupSide();
+        GroupSide groupG = new GroupSide("Group G");
         groupG.AddTeams(new List<Team>() { _teamsList.TeamsDictionary[TeamNamesEnum.LilleOsc], _teamsList.TeamsDictionary[TeamNamesEnum.Sevilla], _teamsList.TeamsDictionary[TeamNamesEnum.Salzburg], _teamsList.TeamsDictionary[TeamNamesEnum.Wolfsburg] });
 
-        GroupSide groupH = new GroupSide();
+        GroupSide groupH = new GroupSide("Group H");
         groupH.AddTeams(new List<Team>() { _teamsList.TeamsDictionary[TeamNamesEnum.Chelsea], _teamsList.TeamsDictionary[TeamNamesEnum.Juventus], _teamsList.TeamsDictionary[TeamNamesEnum.Zenit], _teamsList.TeamsDictionary[TeamNamesEnum.Malmo] });
 
         groupStage.Sides.Add(groupA);

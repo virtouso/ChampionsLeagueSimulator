@@ -9,6 +9,12 @@ public class GroupSide : SideBase
 {
     private Dictionary<Team, TeamRanking> _rankings;
 
+    private string _sideName;
+    public  GroupSide(string sideName)
+    {
+        _sideName = sideName;
+    }
+
     public override void AddTeams(List<Team> teams)
     {
         ParticipatingTeams = teams;
@@ -39,18 +45,18 @@ public class GroupSide : SideBase
 
         foreach (var item in Matches)
         {
-            var matchResults = item.CalculateMatchResult(this.name);
+            var matchResults = item.CalculateMatchResult(_sideName);
 
 
 
     
 
-            StringBuilder result = new StringBuilder();
-            result.Append(this.name).Append(Environment.NewLine)
-                .Append(matchResults[0].Team.TeamName).Append($"({matchResults[0].Team.Nationality})").Append(matchResults[0].GoalsScored).Append("-")
-                .Append(matchResults[1].GoalsScored).Append($"({matchResults[1].Team.Nationality})").Append(matchResults[1].Team.TeamName);
+            //StringBuilder result = new StringBuilder();
+            //result.Append(this.name).Append(Environment.NewLine)
+            //    .Append(matchResults[0].Team.TeamName).Append($"({matchResults[0].Team.Nationality})").Append(matchResults[0].GoalsScored).Append("-")
+            //    .Append(matchResults[1].GoalsScored).Append($"({matchResults[1].Team.Nationality})").Append(matchResults[1].Team.TeamName);
 
-            UtilityLogger.LogResults(result.ToString());
+            //UtilityLogger.LogResults(result.ToString());
 
 
 
