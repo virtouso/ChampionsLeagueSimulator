@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Stage groupStage = new Stage();
+        groupStage.Sides = new List<SideBase>();
 
         GroupSide groupA = new GroupSide();
         groupA.AddTeams(new List<Team>() { _teamsList.TeamsDictionary[TeamNamesEnum.ManCity], _teamsList.TeamsDictionary[TeamNamesEnum.Paris], _teamsList.TeamsDictionary[TeamNamesEnum.Leipzig], _teamsList.TeamsDictionary[TeamNamesEnum.ClubBruges] });
@@ -82,7 +83,7 @@ public class GameManager : MonoBehaviour
 
         for (int i = 0; i < groupsResults.Count; i++)
         {
-            KnockoutSide side = new KnockoutSide();
+            KnockoutSide side = new KnockoutSide("Final Eight");
             side.AddTeams(new List<Team>(2) {groupsResults[i][0], groupsResults[groupsResults.Count-1-i][1]});
             finalEight.Sides.Add(side);
         }
@@ -117,7 +118,7 @@ public class GameManager : MonoBehaviour
 
         for (int i = 0; i <finalEightResults.Count; i+=2)
         {
-            KnockoutSide side = new KnockoutSide();
+            KnockoutSide side = new KnockoutSide("Final Four");
             side.AddTeams(new List<Team>(1) { finalEightResults[i][0] });
             side.AddTeams(new List<Team>(1) { finalEightResults[i+1][0] });
             finalFour.Sides.Add(side);
@@ -150,7 +151,7 @@ public class GameManager : MonoBehaviour
         semiFinal.Sides = new List<SideBase>();
         for (int i = 0; i < finalFourResults.Count; i += 2)
         {
-            KnockoutSide side = new KnockoutSide();
+            KnockoutSide side = new KnockoutSide("Semi Final");
             side.AddTeams(new List<Team>(1) { finalFourResults[i][0] });
             side.AddTeams(new List<Team>(1) { finalFourResults[i + 1][0] });
             semiFinal.Sides.Add(side);
@@ -185,7 +186,7 @@ public class GameManager : MonoBehaviour
             FinalSide side = new FinalSide();
             side.AddTeams(new List<Team>(1) { semiFinalResults[i][0] });
             side.AddTeams(new List<Team>(1) { semiFinalResults[i + 1][0] });
-            semiFinal.Sides.Add(side);
+            final.Sides.Add(side);
         }
 
         foreach (var item in final.Sides)
@@ -201,10 +202,10 @@ public class GameManager : MonoBehaviour
         List<List<Team>> finalResults = new List<List<Team>>();
 
 
-        foreach (var item in final.Sides)
-        {
-            finalResults.Add(item.CalculateNextStageTeams());
-        }
+        //foreach (var item in final.Sides)
+        //{
+        //    finalResults.Add(item.CalculateNextStageTeams());
+        //}
 
 
 

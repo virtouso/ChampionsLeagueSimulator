@@ -11,7 +11,7 @@ public class Match : ScriptableObject
     public DateTime MatchDate;
     public int Attendees;
 
-
+    System.Random _random = new System.Random();
     public Match(string stadium, DateTime date, int attendees)
     {
         Stadium = stadium;
@@ -38,20 +38,20 @@ public class Match : ScriptableObject
 
 
 
-    public List<TeamRanking> CalculateMatchResult()
+    public List<TeamRanking> CalculateMatchResult(string sideName)
     {
         // many configs can happen here. its my own logic
         // todo work more on it
 
         List<TeamRanking> matchStats = new List<TeamRanking>();
 
-        System.Random random = new System.Random();
-        _teams[0].GoalsScored = random.Next(0, 5);
-        _teams[1].GoalsScored = random.Next(0, 5);
+
+        _teams[0].GoalsScored = UtilityRandom.Random.Next(0, 5);
+        _teams[1].GoalsScored = UtilityRandom.Random.Next(0, 5);
 
 
         StringBuilder result = new StringBuilder();
-        result.Append(this.name).Append(Environment.NewLine)
+        result.Append(sideName).Append(Environment.NewLine)
             .Append(_teams[0].Team.TeamName).Append($"({_teams[0].Team.Nationality})").Append(_teams[0].GoalsScored).Append("-")
             .Append(_teams[1].GoalsScored).Append($"({_teams[1].Team.Nationality})").Append(_teams[1].Team.TeamName);
 
@@ -71,22 +71,22 @@ public class Match : ScriptableObject
     }
 
 
-    public List<KnockoutMatchResult> CalculateKnockoutMatchResult()
+    public List<KnockoutMatchResult> CalculateKnockoutMatchResult(string sideName)
     {
         List<KnockoutMatchResult> result = new List<KnockoutMatchResult>();
-        System.Random random = new System.Random();
 
 
-        _teams[0].GoalsScored = random.Next(0, 5);
-        _teams[1].GoalsScored = random.Next(0, 5);
+
+        _teams[0].GoalsScored = UtilityRandom.Random.Next(0, 5);
+        _teams[1].GoalsScored = UtilityRandom.Random.Next(0, 5);
 
 
         StringBuilder stringResult = new StringBuilder();
-        stringResult.Append(this.name).Append(Environment.NewLine)
+        stringResult.Append(sideName).Append(Environment.NewLine)
             .Append(_teams[0].Team.TeamName).Append($"({_teams[0].Team.Nationality})").Append(_teams[0].GoalsScored).Append("-")
             .Append(_teams[1].GoalsScored).Append($"({_teams[1].Team.Nationality})").Append(_teams[1].Team.TeamName);
 
-        UtilityLogger.LogResults(result.ToString());
+        UtilityLogger.LogResults(stringResult.ToString());
 
 
 

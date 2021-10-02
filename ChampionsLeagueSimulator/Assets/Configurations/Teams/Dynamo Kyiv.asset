@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc7d360d53e61794a8a0f4376f54cde4, type: 3}
   m_Name: Dynamo Kyiv
   m_EditorClassIdentifier: 
-  TeamName: Dynamo Kyiv
+  TeamName: 10
   Seed: 4
   Nationality: 7
   Logo: {fileID: 0}

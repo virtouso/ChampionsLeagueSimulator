@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc7d360d53e61794a8a0f4376f54cde4, type: 3}
   m_Name: Sevilla
   m_EditorClassIdentifier: 
-  TeamName: Sevilla
+  TeamName: 24
   Seed: 2
   Nationality: 3
   Logo: {fileID: 0}

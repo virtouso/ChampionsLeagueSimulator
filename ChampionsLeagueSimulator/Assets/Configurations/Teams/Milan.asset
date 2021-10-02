@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc7d360d53e61794a8a0f4376f54cde4, type: 3}
-  m_Name: Young Boys
+  m_Name: Milan
   m_EditorClassIdentifier: 
-  TeamName: 30
+  TeamName: 19
   Seed: 4
-  Nationality: 13
+  Nationality: 2
   Logo: {fileID: 0}
   TeamStats:
-    Attacking: 25
-    Stamina: 25
-    Defence: 30
-    PlayMaking: 30
+    Attacking: 35
+    Stamina: 35
+    Defence: 50
+    PlayMaking: 50

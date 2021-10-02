@@ -8,6 +8,12 @@ using UnityEngine;
 public class KnockoutSide : SideBase
 {
 
+    private string _sideName;
+    public KnockoutSide(string sideName)
+    {
+        _sideName = sideName;
+    }
+
     List<KnockoutMatchResult> _matchResults;
     public override void AddTeams(List<Team> teams)
     {
@@ -34,7 +40,7 @@ public class KnockoutSide : SideBase
             if (_matchResults == null)
                 _matchResults = new List<KnockoutMatchResult>();
 
-            var matchResults = item.CalculateKnockoutMatchResult();
+            var matchResults = item.CalculateKnockoutMatchResult(_sideName);
             _matchResults.AddRange(matchResults);
 
 

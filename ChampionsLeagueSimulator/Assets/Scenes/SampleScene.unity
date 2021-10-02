@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 348150005c489a94793278db8e65766a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _teamsList: {fileID: 0}
+  _teamsList: {fileID: 11400000, guid: 6f6938937a4c0864c882eea3eedb1a73, type: 2}
 --- !u!4 &341696075
 Transform:
   m_ObjectHideFlags: 0

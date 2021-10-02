@@ -39,7 +39,7 @@ public class GroupSide : SideBase
 
         foreach (var item in Matches)
         {
-            var matchResults = item.CalculateMatchResult();
+            var matchResults = item.CalculateMatchResult(this.name);
 
 
 
@@ -74,7 +74,7 @@ public class GroupSide : SideBase
         {
             for (int j = 0; j < ParticipatingTeams.Count; j++)
             {
-                if (i == j) continue;
+                if (ParticipatingTeams[i] == ParticipatingTeams[j]) continue;
                 Match match = new Match("something", System.DateTime.Now.AddDays(5), 10000);
                 MatchTeam team1 = new MatchTeam(ParticipatingTeams[i], TeamCondition.Home);
                 MatchTeam team2 = new MatchTeam(ParticipatingTeams[j], TeamCondition.Away);

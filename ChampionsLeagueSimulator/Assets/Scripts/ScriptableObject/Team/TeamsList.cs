@@ -9,7 +9,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Team", menuName = "ScriptableObjects/TeamsList", order = 1)]
 public class TeamsList : ScriptableObject
 {
-    private List<Team> _teams;
+  [SerializeField]  private List<Team> _teams;
 
 
     private Dictionary<TeamNamesEnum, Team> _teamsDictionary;
@@ -19,10 +19,12 @@ public class TeamsList : ScriptableObject
         get
         {
             if (_teamsDictionary == null)
-                _teamsDictionary = new Dictionary<TeamNamesEnum, Team>(_teams.Count);
-            foreach (var item in _teams)
             {
-                _teamsDictionary.Add(item.TeamName, item);
+                _teamsDictionary = new Dictionary<TeamNamesEnum, Team>(_teams.Count);
+                foreach (var item in _teams)
+                {
+                    _teamsDictionary.Add(item.TeamName, item);
+                }
             }
             return _teamsDictionary;
         }

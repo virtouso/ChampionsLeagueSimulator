@@ -6,6 +6,9 @@ public class FinalSide : SideBase
 {
     public override void AddTeams(List<Team> teams)
     {
+        if (ParticipatingTeams == null)
+            ParticipatingTeams = new List<Team>(2);
+
         ParticipatingTeams.AddRange(teams);
     }
 
@@ -16,7 +19,8 @@ public class FinalSide : SideBase
 
     public override void RunMatches()
     {
-        var results = Matches[0].CalculateMatchResult();
+        var results = Matches[0].CalculateMatchResult("Final");
+        CheckChampion(results);
 
     }
 

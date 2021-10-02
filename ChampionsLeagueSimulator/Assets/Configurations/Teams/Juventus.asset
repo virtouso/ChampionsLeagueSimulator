@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc7d360d53e61794a8a0f4376f54cde4, type: 3}
   m_Name: Juventus
   m_EditorClassIdentifier: 
-  TeamName: Juventus
+  TeamName: 12
   Seed: 2
   Nationality: 2
   Logo: {fileID: 0}
